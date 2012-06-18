@@ -2,9 +2,13 @@
 Environment:
 
 Rails 3.2.3
+
 ruby 1.9.2p318 (2012-02-14 revision 34678) [x86_64-linux]
+
 Mongodb
+
 Haml
+
 devise
 
 
