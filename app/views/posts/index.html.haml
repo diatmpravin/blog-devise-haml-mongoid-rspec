@@ -12,19 +12,22 @@
       Post Title  
       %td= post.name        
       %table
-      Post:
+      %h3 Post:
       - post.part_attributes.each do |part|          
         - part.each do |aPart|
           %tr
             %td
               = aPart[1]
+              %br
+      %h3 Comments:
+      - post.comments.each do |comment|          
+        %h5 Commnet By:
+        = comment.name
+        %h5 Commnet:
+        = comment.body
 
-      Comments:
-      - post.comment_attributes.each do |comment|          
-        - comment.each do |aComment|
-          %tr
-            %td
-              = aComment[1]       
+      
+      -#= debug(post.comments)       
 
       = form_tag comments_path(:id =>post.id), :method => 'post', :class=>'form-search' do
         %label Name
@@ -35,7 +38,9 @@
       %td= link_to 'Show', post
       %td= link_to 'Edit', edit_post_path(post)
       %td= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete
-
+      %hr
 %br
-
+-#= will_paginate @posts
+%hr
 = link_to 'New Post', new_post_path
+

@@ -3,6 +3,23 @@
 %p
   %b Name:
   = @post.name
+  %table
+    %h3 Post:
+    - @post.part_attributes.each do |part|          
+      - part.each do |aPart|
+        %tr
+          %td
+            = aPart[1]
+            %br
+    %h3 Comments:
+    - @post.comments.each do |comment|          
+      %h5 Commnet By:
+      = comment.name
+      %h5 Commnet:
+      = comment.body
+
+      
+    -#= debug(post.comments)
 
 = link_to 'Edit', edit_post_path(@post)
 \|

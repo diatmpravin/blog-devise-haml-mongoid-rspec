@@ -74,7 +74,7 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    factory_girl (3.4.0)
+    factory_girl (3.4.1)
       activesupport (>= 3.0.0)
     factory_girl_rails (3.4.0)
       factory_girl (~> 3.4.0)
