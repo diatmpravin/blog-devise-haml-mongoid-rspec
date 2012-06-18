@@ -1,0 +1,41 @@
+%h1 Listing posts
+
+%table
+  %tr
+    %th Name
+    %th
+    %th
+    %th
+
+  - @posts.each do |post|
+    %tr
+      Post Title  
+      %td= post.name        
+      %table
+      Post:
+      - post.part_attributes.each do |part|          
+        - part.each do |aPart|
+          %tr
+            %td
+              = aPart[1]
+
+      Comments:
+      - post.comment_attributes.each do |comment|          
+        - comment.each do |aComment|
+          %tr
+            %td
+              = aComment[1]       
+
+      = form_tag comments_path(:id =>post.id), :method => 'post', :class=>'form-search' do
+        %label Name
+        = text_field_tag :name
+        %label Comment
+        = text_area_tag :body
+        = submit_tag :comment, :name => 'Post', :class => "btn btn-primary btn-small"        
+      %td= link_to 'Show', post
+      %td= link_to 'Edit', edit_post_path(post)
+      %td= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Post', new_post_path

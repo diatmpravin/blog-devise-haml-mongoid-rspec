@@ -1,0 +1,51 @@
+
+=javascript_include_tag 'jquery.table.addrow.js'
+.bodyContainer
+  %h1 Create your blog
+  
+  #registrationExplanation
+    This blog is developed and designed by Pravin Kumar
+  
+  
+    -if @post.errors.any?
+      %form.standardForm
+        .formTopErrorText
+          %span.formTopErrorHeader> Oops!
+          #error_head_text We discovered an error. Please see below for more information.          
+
+    = form_for @post, :html =>{ :class => 'standardForm'} do |f|
+      
+      .formBox
+        .formSection Blog Tile
+        = f.label :name, "Title" 
+        = f.text_field :name
+
+      .formBox
+        .formSection Blog parts
+
+        %table{ :class => 'atable'}
+          -@post.parts.each_with_index do |part,index|
+            = f.fields_for "part_attributes[]", part do |part_fields|
+        
+              %tr
+                %td{:class => 'table_hr'}
+                  = part_fields.label :body
+                  = part_fields.text_area :body                                                     
+
+                  %span.alternativeRow Add parts
+              
+              %tr
+                %td{:class => 'table_hr'}
+                  = part_fields.label :body
+                  = part_fields.text_area :body
+                                  
+                  %span.delRow Remove part
+
+      = f.submit 'continue'  
+
+:javascript
+  $("document").ready(function(){
+  	$(".alternativeRow").btnAddRow({oddRowCSS:"oddRow",evenRowCSS:"evenRow"});
+  	$(".delRow").btnDelRow();
+  });
+

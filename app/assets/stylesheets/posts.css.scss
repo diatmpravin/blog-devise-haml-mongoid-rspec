@@ -1,0 +1,245 @@
+// Place all the styles related to the profile controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.bodyContainer {
+    clear: both;
+    padding-top: 15px;
+}
+
+#registrationExplanation {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 600px;
+    line-height: 1.3em;
+    font-size: .9em;
+    color: #888;
+}
+
+input, select, textarea {
+    font-family: "museo-sans", "Segoe UI", "Trebuchet MS", Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.standardForm label {
+    display: block;
+    float: left;
+    clear: both;
+    margin-bottom: 7px;
+    margin-right: 5px;
+    width: 225px;
+    font-size: 14px;
+}
+
+.standardForm input[type=text] {
+    display: block;
+    float: left;
+    margin-bottom: 7px;
+    width: 200px;
+    height: 23px;
+    border: solid 1px #ccc;
+    margin-right: 7px;
+    font-size: 14px;
+}
+
+.standardForm textarea {
+    display: block;
+    float: left;
+    margin-bottom: 7px;
+    width: 200px;
+    height: 90px;
+    border: solid 1px #ccc;
+    margin-right: 7px;
+    font-size: 14px;
+}
+
+.standardForm select {
+    display: block;
+    float: left;
+    margin-bottom: 7px;
+    width: 200px;
+    height: 27px;
+    border: solid 1px #ccc;
+    margin-right: 7px;
+    font-size: 14px;
+}
+
+.standardForm input[type=password] {
+    display: block;
+    float: left;
+    margin-bottom: 7px;
+    width: 100px;
+    height: 23px;
+    border: solid 1px #ccc;
+    margin-right: 7px;
+    font-size: 14px;
+}
+
+.standardForm input[type=submit] {
+    background-color: #fab138;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px #777;
+    font-size: 1.3em;
+    color: #fff;
+    font-weight: 300;
+    border: none;
+    padding: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 15px;
+    margin-left: 220px;
+    text-transform: lowercase;
+    cursor: pointer;
+}
+
+.formTopErrorText {
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 7px #777;
+    background-color: #fab138;
+    overflow: hidden;
+    margin-top: 25px;
+    padding: 15px;
+    font-size: 13px;
+    color: #000;
+}
+
+.formTopErrorHeader {
+    display: block;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.formBox {
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 7px #777;
+    background-color: #fff;
+    overflow: hidden;
+    margin-top: 25px;
+    border-top: 5px solid #68c4ea;
+    padding: 15px;
+    padding-top: 20px;
+}
+
+.formBox .formSection {
+    clear: both;
+    font-weight: 700;
+    color: #68c4ea;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.formBox .formSection:first-child {
+    margin-top: -15px;
+    border-top: none;
+}
+
+.formBox .formTopCaptionImportant {
+    clear: both;
+    font-weight: 700;
+    color: #333;
+    font-size: 14px;
+    padding-top: 0px;
+    padding-bottom: 15px;
+}
+
+.formBox .formSectionDivider {
+    height: 10px;
+    border-bottom: 1px solid #999;
+    margin-bottom: 20px;
+    clear: both;
+}
+
+.formBox .formSectionPrimaryAction {
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: 500;
+    text-transform: lowercase;
+}
+
+.formTopErrorText {
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 7px #777;
+    background-color: #fab138;
+    overflow: hidden;
+    margin-top: 25px;
+    padding: 15px;
+    font-size: 13px;
+    color: #000;
+}
+
+.formTopErrorHeader {
+    display: block;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.formBox .formInputError {
+    background-color: #fd9;
+    border-color: #fab138 !important ;
+}
+
+.formBox .formErrorText {
+    color: #e3981c;
+    font-size: 12px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    padding-top: 2px;
+}
+
+/* Register with Key: Existing Login Page */
+.rwkeLoginDecisionsBox {
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 7px #777;
+    background-color: #fff;
+    overflow: hidden;
+    margin-top: 25px;
+    border-top: 5px solid #68c4ea;
+    padding: 15px;
+    padding-top: 20px;
+}
+
+.table_hr
+{    
+    border-bottom:1px solid #A7A7A7;
+    padding-left:15px;
+    padding-top:10px;
+    padding-bottom:15px;
+}
+
+.field_with_errors {  
+  background-color: #FAB138;
+  input, select, textarea {    
+    border-color: #FAB138;
+    background-color: #FFDD99;}
+  }
+
+.alternativeRow{
+    margin-left: 35%;
+    text-decoration: underline;
+}
+
+.delRow{
+    margin-left: 35%;
+    text-decoration: underline;
+}
+
+/* Register with Key: Choose Child Page */
+
+.rwkeccChooseChildBox {
+	width: 500px;
+	border-radius: 10px;
+	box-shadow: 4px 4px 7px #777;
+	background-color: #fff;
+	overflow: hidden;
+	margin-top: 25px;
+	border-top: 5px solid #68c4ea;
+	padding: 15px;
+	padding-top: 20px;
+}
